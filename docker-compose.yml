@@ -1,0 +1,12 @@
+services:
+  app:
+    # Constrói a imagem a partir do Dockerfile no diretório atual
+    build: .
+    # Nome do contêiner
+    container_name: gestao_escolar
+    # Mapeia a porta 8000 do host para a porta 8000 do contêiner
+    ports:
+      - "8000:8000"
+    # Monta o diretório atual no contêiner para permitir o hot-reload
+    volumes:
+      - .:/app
